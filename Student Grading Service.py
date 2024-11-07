@@ -31,7 +31,7 @@ while test < 0 or test > 100:
     if test < 0 or test > 100:
         print("Invalid input. Please enter a grade between 0 and 100.")
 
-# Get the number of days late (0 to 2) using a 'for' loop without 'break'
+# Get the number of days late (0 to 2)
 for i in range(1):
     late_input = input("Enter the Days Late (0-2): ")
     while not late_input.isdigit():
