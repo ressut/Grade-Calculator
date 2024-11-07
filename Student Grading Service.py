@@ -1,10 +1,9 @@
-print("Student Grading Service")
-print()
+
+print("Welcome to the Student Grading Service")
+print() # Added blank lines to make the program look better
 
 # Get student ID
-student_id = int(input("What is your student ID number? "))
-print()
-print(f"Welcome student number {student_id}")
+student_id = int(input("What is the student ID number? "))
 print()
 
 # Get valid code grade between 0 and 100
@@ -34,14 +33,13 @@ raw_grade = code + test
 # Apply late penalty
 if late == 0:
     final_grade = raw_grade
-elif 1 <= late <= 2:
-    final_grade = raw_grade - (late * 5)
 else:
-    print("Days late penalty only applies up to 2 days.")
-    final_grade = raw_grade
+    1 <= late <= 2
+    final_grade = raw_grade - (late * 5)
 
-# Output
-print(f"Code: {code}, Test: {test}, Raw Grade: {raw_grade}, Days Late: {late}, Final Grade: {final_grade}")
 print()
-print("Grading completed and thank you for using SGS.")
-exit()
+# Output
+print(f"Student Number: {student_id}, Code: {code}, Test: {test}, Raw Grade: {raw_grade}, Days Late: {late}, Final Grade: {final_grade}")
+print()
+print("Grading completed, thank you for using SGS.")
+
