@@ -12,33 +12,36 @@ print()
 # Get valid code grade between 0 and 100
 code = -1
 while code < 0 or code > 100:
-    grade_input = input("Enter the Code Grade (0-100): ")
-    while not grade_input.isdigit():
+    code_input = input("Enter the Code Grade (0-100): ")
+    while not code_input.isdigit():
         print("Invalid input. Please enter an integer.")
-        grade_input = input("Enter the Code Grade (0-100): ")
-    code = int(grade_input)
+        code_input = input("Enter the Code Grade (0-100): ")
+    code = int(code_input)
     if code < 0 or code > 100:
         print("Invalid input. Please enter a grade between 0 and 100.")
 
 # Get valid test grade between 0 and 100
 test = -1
 while test < 0 or test > 100:
-    grade_input = input("Enter the Test Grade (0-100): ")
-    while not grade_input.isdigit():
+    test_input = input("Enter the Test Grade (0-100): ")
+    while not test_input.isdigit():
         print("Invalid input. Please enter an integer.")
-        grade_input = input("Enter the Test Grade (0-100): ")
-    test = int(grade_input)
+        test_input = input("Enter the Test Grade (0-100): ")
+    test = int(test_input)
     if test < 0 or test > 100:
         print("Invalid input. Please enter a grade between 0 and 100.")
 
-# Get the number of days late (0 to 2)
-late = -1
-while late < 0 or late > 2:
+# Get the number of days late (0 to 2) using a 'for' loop without 'break'
+for _ in range(1):
     late_input = input("Enter the Days Late (0-2): ")
     while not late_input.isdigit():
         print("Invalid input. Please enter an integer.")
         late_input = input("Enter the Days Late (0-2): ")
     late = int(late_input)
+    
+    if late > 2:
+        print("Too late to Submit")
+        quit()
     if late < 0 or late > 2:
         print("Invalid input. Please enter a number between 0 and 2.")
 
